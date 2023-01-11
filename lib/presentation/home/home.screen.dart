@@ -1,3 +1,4 @@
+import 'package:chatting_app/widgets/app_button.dart';
 import 'package:chatting_app/widgets/app_input.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,10 @@ class HomeScreen extends GetView<HomeController> {
             ),
             AppInput(
               hint: 'email',
+            ),
+            AppButton(
+              text: 'Sign In',
+              onPressed: () {},
             ),
           ],
         ),
