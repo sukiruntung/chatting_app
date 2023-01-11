@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "405592072994",
+    "project_id": "chating-app-f9d18",
+    "storage_bucket": "chating-app-f9d18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405592072994:android:1babc34bd64251a6a77b7b",
+        "android_client_info": {
+          "package_name": "com.sukiruntung.chatting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405592072994-i6o5b298bcjd85b5mgifn3pg6nituct9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDksH1nQMZLMeJXm2vh4w8CDUEqkxoWg7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405592072994-i6o5b298bcjd85b5mgifn3pg6nituct9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
