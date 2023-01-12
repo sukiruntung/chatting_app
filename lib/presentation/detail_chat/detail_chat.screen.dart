@@ -1,3 +1,7 @@
+import 'package:chatting_app/presentation/detail_chat/component/detailchat_content.dart';
+import 'package:chatting_app/presentation/detail_chat/component/detailchat_footer.dart';
+import 'package:chatting_app/presentation/detail_chat/component/detailchat_header.dart';
+import 'package:chatting_app/utils/extension/box_extension.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,15 +13,13 @@ class DetailChatScreen extends GetView<DetailChatController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DetailChatScreen'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'DetailChatScreen is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Column(
+        children: [
+          32.heightBox,
+          const DetailChatHeader(),
+          const DetailChatContent(),
+          const DetailChatFooter(),
+        ],
       ),
     );
   }
