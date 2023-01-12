@@ -24,7 +24,7 @@ class LoginScreen extends GetView<LoginController> {
           28.heightBox,
           const LoginFooter(),
           42.heightBox,
-          LoginSocialMedia(),
+          const LoginSocialMedia(),
         ],
       ),
     ));
