@@ -3,9 +3,12 @@ import 'package:chatting_app/infrastructure/theme/app_font.dart';
 import 'package:flutter/material.dart';
 
 class AppInput extends StatefulWidget {
-  TextEditingController? controller;
+  final TextEditingController? controller;
   final String hint;
-  AppInput({Key? key, required this.hint, this.controller}) : super(key: key);
+  final Widget? prefixIcon;
+  const AppInput(
+      {Key? key, required this.hint, this.controller, this.prefixIcon})
+      : super(key: key);
   @override
   State<AppInput> createState() => _AppInputState();
 }
@@ -20,6 +23,7 @@ class _AppInputState extends State<AppInput> {
         decoration: InputDecoration(
           hintText: widget.hint,
           hintStyle: AppFont.input.copyWith(color: AppColor.grey3),
+          prefixIcon: widget.prefixIcon,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: const BorderSide(
