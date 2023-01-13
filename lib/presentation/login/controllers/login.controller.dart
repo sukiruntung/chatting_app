@@ -22,15 +22,21 @@ class LoginController extends GetxController {
         Get.back();
         if (userAuth != null) {
           debugPrint(userAuth.user.toString());
-          if (userAuth.user!.emailVerified) {
-            Get.offAll(Routes.HOME);
-          } else {
-            Get.snackbar('Error', "please verified your email");
-          }
+          Get.offAllNamed(Routes.LIST_CHAT);
         }
       } on FirebaseAuthException catch (e) {
         Get.snackbar('Error', e.message.toString());
       }
+    }
+  }
+
+  cekLogin() async {
+    var user = auth.currentUser;
+    if (user != null) {
+      return user.toString();
+    } else {
+      return null;
+      // No user is signed in.
     }
   }
 
@@ -44,6 +50,10 @@ class LoginController extends GetxController {
       return false;
     }
     return true;
+  }
+
+  void handleSignupButton() {
+    Get.toNamed(Routes.REGISTER);
   }
   // final count = 0.obs;
   // @override

@@ -1,3 +1,4 @@
+import 'package:chatting_app/infrastructure/navigation/routes.dart';
 import 'package:chatting_app/presentation/login/component/login_footer.dart';
 import 'package:chatting_app/presentation/login/component/login_form.dart';
 import 'package:chatting_app/presentation/login/component/login_logo.dart';
@@ -11,6 +12,7 @@ import 'controllers/login.controller.dart';
 
 class LoginScreen extends GetView<LoginController> {
   const LoginScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class LoginScreen extends GetView<LoginController> {
           78.heightBox,
           const LoginLogo(),
           52.heightBox,
-          LoginForm(),
+          const LoginForm(),
           28.heightBox,
           const LoginFooter(),
           42.heightBox,

@@ -1,5 +1,7 @@
+import 'package:chatting_app/infrastructure/navigation/routes.dart';
 import 'package:chatting_app/widgets/app_button.dart';
 import 'package:chatting_app/widgets/app_input.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -26,8 +28,11 @@ class HomeScreen extends GetView<HomeController> {
               hint: 'email',
             ),
             AppButton(
-              text: 'Sign In',
-              onPressed: () {},
+              text: 'Sign Out',
+              onPressed: () async {
+                await FirebaseAuth.instance.signOut();
+                Get.offAllNamed(Routes.LOGIN);
+              },
             ),
           ],
         ),
