@@ -20,7 +20,7 @@ class LoginScreen extends GetView<LoginController> {
           78.heightBox,
           const LoginLogo(),
           52.heightBox,
-          const LoginForm(),
+          LoginForm(),
           28.heightBox,
           const LoginFooter(),
           42.heightBox,

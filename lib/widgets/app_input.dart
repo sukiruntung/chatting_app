@@ -6,8 +6,13 @@ class AppInput extends StatefulWidget {
   final TextEditingController? controller;
   final String hint;
   final Widget? prefixIcon;
+  final bool? obsecureText;
   const AppInput(
-      {Key? key, required this.hint, this.controller, this.prefixIcon})
+      {Key? key,
+      required this.hint,
+      this.controller,
+      this.prefixIcon,
+      this.obsecureText})
       : super(key: key);
   @override
   State<AppInput> createState() => _AppInputState();
@@ -20,6 +25,7 @@ class _AppInputState extends State<AppInput> {
       height: 40,
       child: TextFormField(
         controller: widget.controller,
+        obscureText: widget.obsecureText ?? false,
         decoration: InputDecoration(
           hintText: widget.hint,
           hintStyle: AppFont.input.copyWith(color: AppColor.grey3),
